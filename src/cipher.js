@@ -1,6 +1,7 @@
 window.cipher = {
   // ... Función encode
-  encode: (offset, string){
+  encode: (offset, string) => {
+console.log(typeof(offset))
 
     let mensajeCodificado = '';
     for (let index = 0; index < string.length; index++) {
@@ -12,10 +13,10 @@ window.cipher = {
   return mensajeCodificado;
   },
   
-  decode: (offset, string){
+ //... decode: (offset, string) => {
   
   
-  }
+  
 
 
 
