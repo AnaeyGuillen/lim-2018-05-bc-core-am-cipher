@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "utf-8">
+    <title>Caesar Cipher</title>
+    <link rel = "stylesheet" href = "style.css" />
+  </head>
+  <body>
+    <h1>DESCIFRANDO TEXTO</h1>
+    <!--Agregando descripción-->
+    <p>Te imaginaste tener una aplicación que permita codificar tus mensajes para ocasiones especiales y tu grupo de amigos puedan entenderlo. Esto es posible aquí! Inténtalo!!</p>
+    <p2><strong>CIFRADO CÉSAR:</strong> El cifrado César fue nombrado así en honor a Julio César, quien usó un alfabeto con desplazamiento de tres espacios.<br>
+      Si tenía que decir algo confidencial, lo escribía usando el cifrado, esto es, cambiando el orden de las letras del alfabeto, para que ni una palabra pudiera entenderse.</p2><br>
+    <!--Agregando formularios-->
+    <form><div class = "formularios">
+      <label for="text"><strong>Ingrese su mensaje</strong></label><br>
+      <textarea id = "cifrar" rows="10" cols="50" placeholder = "Escribe aquí tu mensaje"></textarea><br><br>
+      <input type = "text" placeholder ="Número" size= "3" name = "number"><br>
+      <input type = "button" value = "Codificar"><br>
+      <input type = "button" value = "Decodificar"><br><br>
+      <label for = "text"><strong>Mensaje Resultante</strong></label><br>
+      <textarea id = "descifrar" rows="10" cols="50" placeholder = "Escribe aquí tu mensaje"></textarea><br>
+      <input type = "reset" value = "Limpiar"
+    </div>
+    </form>
+    </div>
+    <div id = "root"></div>
+    <script src="cipher.js"></script>
+    <script src="index.js"></script>
+    <footer>
+      <p1>Copyright © Anaey Guillen</p1>
+    </footer>
+  </body>
+</html>
