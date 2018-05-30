@@ -1,17 +1,19 @@
 window.cipher = {
-  // ... Función encode
+  // ... Función que codifica
   encode: (offset, string) => {
-
     let mensajeCodificado = '';
     for (let index = 0; index < string.length; index++) {
       let codigoCaracter = string.toUpperCase().charCodeAt(index);
-      let nuevoCaracter = (codigoCaracter - 65 + offset)%26 + 65;
-      let nuevoCaracterCodificado = String.fromCharCode(nuevoCaracter);
-      mensajeCodificado = mensajeCodificado + nuevoCaracterCodificado;
+      if(codigoCaracter >= 32 && codigoCaracter <= 64){
+         
+      } else {
+        let nuevoCaracter = (codigoCaracter - 65 + offset)%26 + 65;
+        let nuevoCaracterCodificado = String.fromCharCode(nuevoCaracter);
+        mensajeCodificado = mensajeCodificado + nuevoCaracterCodificado;
+      }      
     }
-  return mensajeCodificado;
+    return mensajeCodificado;
   },
-  
  //... función decode
   decode: (offset, string) => {
     let mensajeDecodificado='';
@@ -19,10 +21,10 @@ window.cipher = {
       let codigoCaracter=string.toUpperCase().charCodeAt(index);
       let nuevoCaracter= (codigoCaracter+65-offset)%26+65;
       let nuevoCaracterDecodificado = String.fromCharCode(nuevoCaracter);
-      mensajeDecodificado = mensajeDecodificado + nuevoCaracterDecodificado
+      mensajeDecodificado = mensajeDecodificado + nuevoCaracterDecodificado;
+
+
     }
-  return mensajeDecodificado;
-
+    return mensajeDecodificado;
   }
-
-};
+}
