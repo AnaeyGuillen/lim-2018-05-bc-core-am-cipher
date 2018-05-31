@@ -4,7 +4,7 @@ window.cipher = {
     let mensajeCodificado = '';
     for (let index = 0; index < string.length; index++) {
       let codigoCaracter = string.toUpperCase().charCodeAt(index);
-      if (codigoCaracter == 32){
+      if (codigoCaracter === 32){
         let space = " "; 
         mensajeCodificado = mensajeCodificado + space;
       } else {
@@ -15,15 +15,19 @@ window.cipher = {
     }
     return mensajeCodificado;
   },
- //... función decode
+ //... función que decodifica
   decode: (offset, string) => {
     let mensajeDecodificado='';
     for (let index=0; index<string.length; index++){
       let codigoCaracter = string.toUpperCase().charCodeAt(index);
-      let nuevoCaracter = (codigoCaracter+65-offset)%26+65;
-      let nuevoCaracterDecodificado = String.fromCharCode(nuevoCaracter);
-      mensajeDecodificado = mensajeDecodificado + nuevoCaracterDecodificado;
-
+      if (codigoCaracter === 32){
+        let space = " ";
+        mensajeCodificado= mensajeDecodificado + space
+      } else{
+        let nuevoCaracter = (codigoCaracter+65-offset)%26+65;
+        let nuevoCaracterDecodificado = String.fromCharCode(nuevoCaracter);
+        mensajeDecodificado = mensajeDecodificado + nuevoCaracterDecodificado;
+      }
 
     }
     return mensajeDecodificado;

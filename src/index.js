@@ -1,5 +1,5 @@
-let inputencode =  document.getElementById("codificar");
-inputencode.addEventListener("click",() => {
+let btnencode =  document.getElementById("Codificar");
+btnencode.addEventListener("click",() => {
     let offset = parseInt(document.getElementById("number").value);
     let ingMensaje = document.getElementById("cifrar").value;
     let encode = cipher.encode(offset, ingMensaje);
