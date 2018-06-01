@@ -22,7 +22,7 @@ window.cipher = {
       let codigoCaracter = string.toUpperCase().charCodeAt(index);
       if (codigoCaracter === 32){
         let space = " ";
-        mensajeCodificado= mensajeDecodificado + space
+        mensajeDecodificado= mensajeDecodificado + space;
       } else{
         let nuevoCaracter = (codigoCaracter+65-offset)%26+65;
         let nuevoCaracterDecodificado = String.fromCharCode(nuevoCaracter);
