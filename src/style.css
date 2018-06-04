@@ -1,17 +1,17 @@
 body{
-    background-color: bisque;
+    background-color: rgba(208, 205, 241, 0.911);
     margin: 0px;
 }
 h1{
     text-align: center;
-    color: brown;
+    color: rgb(150, 59, 59);
     font-size: 50px;
     font-family: 'Overlock', cursive;
     margin: 2% 
 }
 p{
     text-align: center;
-    color: midnightblue;
+    color: rgb(10, 10, 49);
     font-family: 'Overlock', cursive;
     font-size: 20px;
     padding: 1%
